@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./icon.ico" type="image/x-icon">
+    <title>launcher download</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-image: url('/1.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+        div.titre{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        div.button{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        h1{
+            font-family: "Poppins";
+            margin-top: 2rem;
+            font-size: 4rem;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            background-color: rgba(204, 204, 204, 0.8);
+        }
+        button{
+            font-family: "Poppins";
+            font-size: 2.4rem;
+            padding: 20px 40px;
+            align-items: center;
+            margin: 20px;
+            background-color: rgb(245, 245, 245);
+            border-radius: 20px;
+            border: 4px solid #00bd7a;
+            color: #151515;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #c2c2c2;
+        }
+    </style>
+</head>
+<body>
+    <div class="titre"><h1>Telecharger le launcher</h1></div>
+    <div class="button"><button onclick="download('windows')">Windows</button></div>
+    <div class="button"><button onclick="download('mac')">Mac</button></div>
+    <div class="button"><button onclick="download('linux')">Linux</button></div>
+    <script>
+        function download(platform){
+            if(platform == 'windows'){
+                window.location.href = 'https://github.com/warzskynox12/Launcher/releases/download/1.0.0/Launcher-win-x64.exe';
+            }else if(platform == 'mac'){
+                window.location.href = 'https://github.com/warzskynox12/Launcher/releases/download/1.0.0/Launcher-mac-arm64.dmg';
+            }else if(platform == 'linux'){
+                window.location.href = 'https://github.com/warzskynox12/Launcher/releases/download/1.0.0/Launcher-linux-amd64.deb';
+            }
+        }
+    </script>
+</body>
+</html>
